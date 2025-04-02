@@ -1,3 +1,11 @@
+let inputTarefa = document.getElementById("inputTarefa");
+let inputButton = document.getElementById("inputButton")
+
+inputTarefa.addEventListener("keyup", function(event){
+if (event.key === "Enter")
+inputButton.click();
+})
+
 function adicionarTarefa() {
       let mensagem = "Tarefa adicionada com sucesso!";
 
