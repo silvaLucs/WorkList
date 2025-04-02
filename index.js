@@ -8,9 +8,15 @@ inputButton.click();
 
 function adicionarTarefa() {
       let mensagem = "Tarefa adicionada com sucesso!";
-
       let inputTarefa = document.getElementById("inputTarefa")
       let tarefa = inputTarefa.value
+
+        if (tarefa === ""){
+          mensagem = "Insira uma tarefa valida!"
+          document.getElementById("mensagem").textContent = mensagem;
+
+      }
+      else{
 
        document.getElementById("mensagem").textContent = mensagem;
 
@@ -23,4 +29,4 @@ function adicionarTarefa() {
 
        inputTarefa.value = ""
     }
-
+  }
