@@ -26,7 +26,7 @@ function adicionarTarefa() {
        novaTarefa.textContent = tarefa
 
        listaTarefas.appendChild(novaTarefa) 
-
-       inputTarefa.value = ""
     }
+
+     inputTarefa.value = ""
   }
