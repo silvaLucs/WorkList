@@ -9,7 +9,7 @@ inputButton.click();
 function adicionarTarefa() {
       let mensagem = "Tarefa adicionada com sucesso!";
       let inputTarefa = document.getElementById("inputTarefa")
-      let tarefa = inputTarefa.value
+      let tarefa = inputTarefa.value.trim()
 
         if (tarefa === ""){
           mensagem = "Insira uma tarefa valida!"
