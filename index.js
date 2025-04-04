@@ -25,6 +25,14 @@ function adicionarTarefa() {
        novaTarefa.textContent = tarefa
 
        listaTarefas.appendChild(novaTarefa) 
+
+       let botaoRemover = document.createElement("button");
+       botaoRemover.textContent = "❌";
+       botaoRemover.addEventListener("click", () => {
+       novaTarefa.remove();
+});
+
+novaTarefa.appendChild(botaoRemover);
     }
 
       inputTarefa.value = ""

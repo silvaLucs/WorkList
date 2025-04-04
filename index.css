@@ -24,7 +24,7 @@ p {
     color: #331F19;
     font-size: 1.1em;
 }
-button {
+#inputButton {
     background-color: #60041A;
     color: #F4F0EA;
     padding: 10px 20px;
@@ -35,7 +35,7 @@ button {
     transition: background-color 0.3s ease;
     margin-top: 10px;
 }
-button:hover {
+#inputbutton:hover {
     background-color: #A34743;
 }
 ul {
@@ -50,6 +50,19 @@ ul li {
     margin: 5px 0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul li button {
+    border: none;
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 16px;
+}
+
+ul li button:hover{
+    background-color: #b8b8b8;
 }
 
 /* Estilo para o campo de entrada */
