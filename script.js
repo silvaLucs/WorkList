@@ -6,6 +6,8 @@ if (event.key === "Enter")
 inputButton.click();
 })
 
+let tarefas = [];
+
 function adicionarTarefa() {
       let mensagem = document.getElementById("mensagem");
       let tarefa = inputTarefa.value.trim()
@@ -19,21 +21,22 @@ function adicionarTarefa() {
        mensagem.textContent = "Tarefa adicionada com sucesso"
        mensagem.style.color = "#28A745"
 
-       const listaTarefas = document.getElementById("listaTarefas")
-       let novaTarefa = document.createElement("li")
+       tarefas.push(tarefa)
+       renderizarTarefas()
+};
+       inputTarefa.value = ""
+  }
 
-       novaTarefa.textContent = tarefa
+  function renderizarTarefas(){
+    const listaTarefas = document.getElementById("listaTarefas")
+    listaTarefas.innerHTML = ""
+    let i = 0
+
+    for(i; i < tarefas.length ; i++){
+
+    let novaTarefa = document.createElement("li")
+
+       novaTarefa.textContent = tarefas[i]
 
        listaTarefas.appendChild(novaTarefa) 
-
-       let botaoRemover = document.createElement("button");
-       botaoRemover.textContent = "❌";
-       botaoRemover.addEventListener("click", () => {
-       novaTarefa.remove();
-});
-
-novaTarefa.appendChild(botaoRemover);
-    }
-
-      inputTarefa.value = ""
-  }
+  } }
