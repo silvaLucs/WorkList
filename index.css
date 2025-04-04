@@ -55,10 +55,10 @@ ul li {
 ul li button {
     border: none;
     position: absolute;
-    background-color: #ffffff;
     border-radius: 40px;
     cursor: pointer;
     margin-left: 16px;
+    
 }
 
 ul li button:hover{
