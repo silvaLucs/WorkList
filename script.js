@@ -45,7 +45,7 @@ function adicionarTarefa() {
     let botaoEditar = document.createElement("button")
     botaoEditar.className = "editar"
     botaoEditar.textContent = "editar"
-    botaoEditar.onclick = () => editarTarefa ()
+    botaoEditar.onclick = () => editarTarefa (i)
     
     
     
@@ -59,6 +59,10 @@ function adicionarTarefa() {
     renderizarTarefas()
   }
 
-  function editarTarefa() {
-
+  function editarTarefa(i) {
+    let tarefaEditada = prompt("Edite a tarefa")
+    if(tarefaEditada.trim() !== "") { 
+      tarefas[i] = tarefaEditada
+      renderizarTarefas()
+    }
   }
