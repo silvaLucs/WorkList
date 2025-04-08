@@ -24,8 +24,8 @@ p {
     color: #331F19;
     font-size: 1.1em;
 }
-#inputButton {
-    background-color: #60041A;
+button {
+    background-color: #798252;
     color: #F4F0EA;
     padding: 10px 20px;
     border: none;
@@ -35,8 +35,9 @@ p {
     transition: background-color 0.3s ease;
     margin-top: 10px;
 }
-#inputbutton:hover {
-    background-color: #A34743;
+button:hover {
+    background-color: #CCD595;
+    color: #504e4d;
 }
 ul {
     list-style: none;
@@ -50,19 +51,6 @@ ul li {
     margin: 5px 0;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-ul li button {
-    border: none;
-    position: absolute;
-    border-radius: 40px;
-    cursor: pointer;
-    margin-left: 16px;
-    
-}
-
-ul li button:hover{
-    background-color: #b8b8b8;
 }
 
 /* Estilo para o campo de entrada */

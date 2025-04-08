@@ -41,15 +41,24 @@ function adicionarTarefa() {
     botaoRemover.className = "remover"
     botaoRemover.textContent = "remover"
     botaoRemover.onclick = () => removerTarefa(i)
+
+    let botaoEditar = document.createElement("button")
+    botaoEditar.className = "editar"
+    botaoEditar.textContent = "editar"
+    botaoEditar.onclick = () => editarTarefa ()
     
     
     
-    novaTarefa.appendChild(botaoRemover)      
-       
-       listaTarefas.appendChild(novaTarefa) 
+    novaTarefa.appendChild(botaoRemover)
+    novaTarefa.appendChild(botaoEditar)       
+    listaTarefas.appendChild(novaTarefa) 
   } }
 
   function removerTarefa(i) {
     tarefas.splice(i,1)
     renderizarTarefas()
+  }
+
+  function editarTarefa() {
+
   }
