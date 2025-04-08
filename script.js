@@ -32,11 +32,24 @@ function adicionarTarefa() {
     listaTarefas.innerHTML = ""
     let i = 0
 
-    for(i; i < tarefas.length ; i++){
+    for(let i = 0; i < tarefas.length; i++){ 
 
     let novaTarefa = document.createElement("li")
+    novaTarefa.textContent = tarefas[i]
 
-       novaTarefa.textContent = tarefas[i]
-
+    let botaoRemover = document.createElement("button")
+    botaoRemover.className = "remover"
+    botaoRemover.textContent = "remover"
+    botaoRemover.onclick = () => removerTarefa(i)
+    
+    
+    
+    novaTarefa.appendChild(botaoRemover)      
+       
        listaTarefas.appendChild(novaTarefa) 
   } }
+
+  function removerTarefa(i) {
+    tarefas.splice(i,1)
+    renderizarTarefas()
+  }
